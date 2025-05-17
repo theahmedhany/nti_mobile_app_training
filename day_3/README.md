@@ -11,8 +11,6 @@ A simple yet elegant Flutter application designed to demonstrate foundational UI
   - Light gray background with **rounded corners**
 - **Responsive Design**: Adapts seamlessly across different screen sizes
 
-![New App Image](https://github.com/user-attachments/assets/f6d7a30c-0b89-4a84-b6de-2e1f2c4cc553)
-
 ## 🛠️ Key Features & Concepts
 
 This app showcases essential Flutter UI elements, including:
@@ -22,5 +20,11 @@ This app showcases essential Flutter UI elements, including:
 - `Row` layout for horizontal alignment of icon and text
 - Integration of `Icons` and `Text` widgets
 - Application of **Material Design** colors and theming
+
+---
+
+### ✅ Explore the application view.
+
+![New App Image](https://github.com/user-attachments/assets/f6d7a30c-0b89-4a84-b6de-2e1f2c4cc553)
 
 ---
