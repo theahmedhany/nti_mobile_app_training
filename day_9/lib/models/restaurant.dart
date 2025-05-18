@@ -32,7 +32,7 @@ class Restaurant {
     this.imageCredits,
     this.distance,
     this.rating,
-    this.items, //
+    this.items,
   );
 
   String getRatingAndDistance() {

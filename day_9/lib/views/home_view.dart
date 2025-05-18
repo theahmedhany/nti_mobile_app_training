@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:practice_1/constants.dart';
-import 'package:practice_1/views/account_view.dart';
-import 'package:practice_1/views/category_view.dart';
 import 'package:practice_1/views/main_home_view.dart';
 
 class HomeView extends StatefulWidget {
@@ -28,7 +26,11 @@ class _HomeViewState extends State<HomeView> {
   }
 
   List<Widget> _buildScreens() {
-    return [const MainHomeView(), const CategoryView(), const AccountView()];
+    return [
+      const MainHomeView(),
+      const Center(child: Text('Category')),
+      const Center(child: Text('Account')),
+    ];
   }
 
   List<Widget> _buildNavigationBarItems() {
@@ -62,6 +64,8 @@ class _HomeViewState extends State<HomeView> {
 
       appBar: AppBar(
         title: Text('Yummy'),
+        surfaceTintColor: Colors.transparent,
+        forceMaterialTransparency: true,
         actions: [
           IconButton(
             onPressed: widget.changeTheme,

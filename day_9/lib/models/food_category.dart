@@ -3,11 +3,7 @@ class FoodCategory {
   final int numberOfRestaurants;
   final String imageUrl;
 
-  const FoodCategory(
-    this.name,
-    this.numberOfRestaurants,
-    this.imageUrl, //
-  );
+  const FoodCategory(this.name, this.numberOfRestaurants, this.imageUrl);
 }
 
 const List<FoodCategory> categories = [

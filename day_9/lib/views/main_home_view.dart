@@ -1,73 +1,69 @@
 import 'package:flutter/material.dart';
-import 'package:practice_1/models/food_category.dart';
+import 'package:practice_1/api/mock_yummy_service.dart';
+import 'package:practice_1/widgets/category_card.dart';
+import 'package:practice_1/widgets/posts_card.dart';
+import 'package:practice_1/widgets/restaurant_card.dart';
 
 class MainHomeView extends StatelessWidget {
   const MainHomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Card(
-          color: const Color(0xFFF0EDCE),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
+    return FutureBuilder<ExploreData>(
+      future: MockYummyService().getExploreData(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return Center(child: Text('Error: ${snapshot.error}'));
+        } else if (!snapshot.hasData) {
+          return const Center(child: Text('No data found.'));
+        }
+
+        final data = snapshot.data!;
+        return SingleChildScrollView(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(10),
-                    ),
-                    child: Image(image: AssetImage(categories[0].imageUrl)),
-                  ),
-                  Positioned(
-                    top: 20,
-                    left: 20,
-                    child: Text('Yummy', style: TextStyle(fontSize: 70)),
-                  ),
-                  Positioned(
-                    right: 20,
-                    bottom: 20,
-                    child: RotatedBox(
-                      quarterTurns: 1,
-                      child: Text('Yummy', style: TextStyle(fontSize: 70)),
-                    ),
-                  ),
-                ],
-              ),
               Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    Text(
-                      categories[0].name,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      '${categories[0].numberOfRestaurants} pieces',
-                      style: const TextStyle(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 10,
+                ),
+                child: Text(
+                  'Food Categories',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               ),
+              CategoryCard(category: data.categories),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 10,
+                ),
+                child: Text(
+                  'Restaurant Items',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+              ),
+              RestaurantCard(restaurantItems: data.restaurants),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 10,
+                ),
+                child: Text(
+                  'Customer Reviews',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+              ),
+              PostsCard(posts: data.friendPosts),
             ],
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }
