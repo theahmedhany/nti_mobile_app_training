@@ -18,7 +18,6 @@ class _OrdersViewState extends State<OrdersView> {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "My Orders",
