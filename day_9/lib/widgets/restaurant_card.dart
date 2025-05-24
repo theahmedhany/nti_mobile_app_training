@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/models/cart_manager.dart';
+import 'package:practice_1/models/order_manager.dart';
 import 'package:practice_1/models/restaurant.dart';
 import 'package:practice_1/views/details_view.dart';
 
-class RestaurantCard extends StatelessWidget {
-  const RestaurantCard({super.key, required this.restaurantItems});
+class RestaurantCard extends StatefulWidget {
+  const RestaurantCard({
+    super.key,
+    required this.restaurantItems,
+    required this.orderManager,
+  });
 
   final List<Restaurant> restaurantItems;
+  final OrderManager orderManager;
 
+  @override
+  State<RestaurantCard> createState() => _RestaurantCardState();
+}
+
+class _RestaurantCardState extends State<RestaurantCard> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -22,10 +34,18 @@ class RestaurantCard extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder:
-                      (context) =>
-                          DetailsView(restaurant: restaurantItems[index]),
+                      (context) => DetailsView(
+                        restaurant: widget.restaurantItems[index],
+                        cartManager: CartManager(),
+                        onTapAddToCart: () {
+                          setState(() {});
+                        },
+                        orderManager: widget.orderManager,
+                      ),
                 ),
-              );
+              ).then((_) {
+                setState(() {});
+              });
             },
             child: SizedBox(
               width: 140,
@@ -42,7 +62,9 @@ class RestaurantCard extends StatelessWidget {
                         top: Radius.circular(10),
                       ),
                       child: Image(
-                        image: AssetImage(restaurantItems[index].imageUrl),
+                        image: AssetImage(
+                          widget.restaurantItems[index].imageUrl,
+                        ),
                         height: 80,
                         width: double.infinity,
                         fit: BoxFit.cover,
@@ -54,7 +76,7 @@ class RestaurantCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            restaurantItems[index].name,
+                            widget.restaurantItems[index].name,
                             style: const TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
@@ -64,7 +86,7 @@ class RestaurantCard extends StatelessWidget {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            restaurantItems[index].attributes,
+                            widget.restaurantItems[index].attributes,
                             style: const TextStyle(
                               fontSize: 12,
                               color: Colors.grey,

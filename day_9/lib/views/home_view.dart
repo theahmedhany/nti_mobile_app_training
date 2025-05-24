@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:practice_1/constants.dart';
+import 'package:practice_1/models/order_manager.dart';
+import 'package:practice_1/views/account_view.dart';
 import 'package:practice_1/views/main_home_view.dart';
+import 'package:practice_1/views/orders_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({
@@ -18,6 +21,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
+  final OrderManager _orderManager = OrderManager();
 
   void _onItemTapped(int index) {
     setState(() {
@@ -27,9 +31,9 @@ class _HomeViewState extends State<HomeView> {
 
   List<Widget> _buildScreens() {
     return [
-      const MainHomeView(),
-      const Center(child: Text('Category')),
-      const Center(child: Text('Account')),
+      MainHomeView(orderManager: _orderManager),
+      OrdersView(orderManager: _orderManager),
+      const AccountView(),
     ];
   }
 
@@ -43,7 +47,7 @@ class _HomeViewState extends State<HomeView> {
       NavigationDestination(
         icon: const Icon(Icons.category_outlined),
         selectedIcon: const Icon(Icons.category),
-        label: 'Category',
+        label: 'Orders',
       ),
       NavigationDestination(
         icon: const Icon(Icons.person_2_outlined),
@@ -61,7 +65,6 @@ class _HomeViewState extends State<HomeView> {
         selectedIndex: _selectedIndex,
         onDestinationSelected: _onItemTapped,
       ),
-
       appBar: AppBar(
         title: Text('Yummy'),
         surfaceTintColor: Colors.transparent,
@@ -82,7 +85,6 @@ class _HomeViewState extends State<HomeView> {
               return List.generate(ColorSelection.values.length, (index) {
                 return PopupMenuItem(
                   value: index,
-
                   child: Row(
                     children: [
                       Icon(

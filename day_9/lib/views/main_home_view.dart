@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:practice_1/api/mock_yummy_service.dart';
+import 'package:practice_1/models/order_manager.dart';
 import 'package:practice_1/widgets/category_card.dart';
 import 'package:practice_1/widgets/posts_card.dart';
 import 'package:practice_1/widgets/restaurant_card.dart';
 
 class MainHomeView extends StatelessWidget {
-  const MainHomeView({super.key});
+  const MainHomeView({super.key, required this.orderManager});
+
+  final OrderManager orderManager;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +50,10 @@ class MainHomeView extends StatelessWidget {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               ),
-              RestaurantCard(restaurantItems: data.restaurants),
+              RestaurantCard(
+                restaurantItems: data.restaurants,
+                orderManager: orderManager,
+              ),
               const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.symmetric(
