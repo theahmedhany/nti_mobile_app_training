@@ -34,4 +34,6 @@ Yummy is a mobile application designed to simplify food discovery and ordering f
 
 #### To see Yummy in action, check out the video below:
 
+https://github.com/user-attachments/assets/4a78cd34-d2d8-4a8f-8e01-b29a6fc972a3
+
 ---
