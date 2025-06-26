@@ -1,0 +1,65 @@
+{
+    "@@locale": "en",
+    "appTitle": "News App",
+    "@appTitle": {
+      "description": "The title of the application displayed in the app bar or task switcher."
+    },
+    "sports": "Sports",
+    "@sports": {
+      "description": "Label for the Sports news category tab."
+    },
+    "politics": "Politics",
+    "@politics": {
+      "description": "Label for the Politics news category tab."
+    },
+    "entertainment": "Entertainment",
+    "@entertainment": {
+      "description": "Label for the Entertainment news category tab."
+    },
+    "settings": "Settings",
+    "@settings": {
+      "description": "Label for the Settings screen/button."
+    },
+    "language": "Language",
+    "@language": {
+      "description": "Label for the language selection setting."
+    },
+    "theme": "Theme",
+    "@theme": {
+      "description": "Label for the theme selection setting."
+    },
+    "lightMode": "Light Mode",
+    "@lightMode": {
+      "description": "Label indicating the light theme is selected."
+    },
+    "darkMode": "Dark Mode",
+    "@darkMode": {
+      "description": "Label indicating the dark theme is selected."
+    },
+    "errorLoadingNews": "Error loading news",
+    "@errorLoadingNews": {
+      "description": "Error message displayed when news fetching fails."
+    },
+    "retry": "Retry",
+    "@retry": {
+      "description": "Label for the button to retry loading news after an error."
+    },
+    "noNewsFound": "No news found",
+    "@noNewsFound": {
+      "description": "Message displayed when no news articles are available for a category."
+    },
+    "search": "Search...",
+    "@search": {
+      "description": "Placeholder text for the search input field or label for the search button."
+    },
+    "unexpectedError": "An unexpected error occurred. Please try again later.",
+    "@unexpectedError": {
+      "description": "Displayed when a generic or unknown error happens during data loading or API failure."
+    },
+
+    "noArticlesFound": "No articles found.",
+    "@noArticlesFound": {
+      "description": "Shown when the news list is empty after a successful API call."
+    }
+  }
+  

@@ -1,0 +1,66 @@
+{
+    "@@locale": "ar",
+    "appTitle": "تطبيق الأخبار",
+    "@appTitle": {
+      "description": "The title of the application displayed in the app bar or task switcher."
+    },
+    "sports": "رياضة",
+    "@sports": {
+      "description": "Label for the Sports news category tab."
+    },
+    "politics": "سياسة",
+    "@politics": {
+      "description": "Label for the Politics news category tab."
+    },
+    "entertainment": "ترفيه",
+    "@entertainment": {
+      "description": "Label for the Entertainment news category tab."
+    },
+    "settings": "الإعدادات",
+    "@settings": {
+      "description": "Label for the Settings screen/button."
+    },
+    "language": "اللغة",
+    "@language": {
+      "description": "Label for the language selection setting."
+    },
+    "theme": "المظهر",
+    "@theme": {
+      "description": "Label for the theme selection setting."
+    },
+    "lightMode": "الوضع النهاري",
+    "@lightMode": {
+      "description": "Label indicating the light theme is selected."
+    },
+    "darkMode": "الوضع الليلي",
+    "@darkMode": {
+      "description": "Label indicating the dark theme is selected."
+    },
+    "errorLoadingNews": "خطأ في تحميل الأخبار",
+    "@errorLoadingNews": {
+      "description": "Error message displayed when news fetching fails."
+    },
+    "retry": "إعادة المحاولة",
+    "@retry": {
+      "description": "Label for the button to retry loading news after an error."
+    },
+    "noNewsFound": "لم يتم العثور على أخبار",
+    "@noNewsFound": {
+      "description": "Message displayed when no news articles are available for a category."
+    },
+    "search": "بحث...",
+    "@search": {
+      "description": "Placeholder text for the search input field or label for the search button."
+    },
+    "unexpectedError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقًا.",
+    "@unexpectedError": {
+      "description": "يظهر عندما يحدث خطأ عام أو غير معروف أثناء تحميل البيانات أو فشل API."
+    },
+  
+    "noArticlesFound": "لم يتم العثور على مقالات.",
+    "@noArticlesFound": {
+      "description": "يظهر عند عدم وجود مقالات بعد استدعاء ناجح لـ API."
+    }
+  
+  }
+  
