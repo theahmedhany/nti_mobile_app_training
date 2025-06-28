@@ -1,4 +1,4 @@
-# Day #: Aura - Weather App.
+# Day 13: Aura - Weather App.
 
 ## Description
 
