@@ -88,12 +88,12 @@ The main shopping interface displays a comprehensive product grid with:
 
 ## 📱 Screenshots
 
-- ![Splash screen with animation](https://github.com/user-attachments/assets/03d4d184-e52a-4371-9d26-1a25c52df15b)
-- ![Login screen with form validation](https://github.com/user-attachments/assets/b25bb518-da8e-4f6d-9845-23d3308d6d97)
-- ![Error state display with user guidance](https://github.com/user-attachments/assets/9a88c1f5-79ea-4dbc-844e-58f783fc25ed)
-- ![Loading animation during authentication](https://github.com/user-attachments/assets/1f3212bf-bc95-4aef-9e5c-530eb0573aca)
+![Splash screen with animation](https://github.com/user-attachments/assets/03d4d184-e52a-4371-9d26-1a25c52df15b)
+![Login screen with form validation](https://github.com/user-attachments/assets/b25bb518-da8e-4f6d-9845-23d3308d6d97)
+![Error state display with user guidance](https://github.com/user-attachments/assets/9a88c1f5-79ea-4dbc-844e-58f783fc25ed)
+![Loading animation during authentication](https://github.com/user-attachments/assets/1f3212bf-bc95-4aef-9e5c-530eb0573aca)
 
-- ![Grid layout with product cards](https://github.com/user-attachments/assets/e724ad83-a798-4645-9993-900920bfa4f5)
-- ![Detailed product view with specifications](https://github.com/user-attachments/assets/57aa4fa7-d6b4-418a-9ea1-c941ec8392b0)
+![Grid layout with product cards](https://github.com/user-attachments/assets/e724ad83-a798-4645-9993-900920bfa4f5)
+![Detailed product view with specifications](https://github.com/user-attachments/assets/57aa4fa7-d6b4-418a-9ea1-c941ec8392b0)
 
 ---
