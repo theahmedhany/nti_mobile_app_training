@@ -27,7 +27,7 @@ This repository showcases the comprehensive learning journey and project outcome
 
 ## **Core Learning Modules**
 
-### 🔧 **Technical Excellence**
+### **Technical Excellence**
 
 **Flutter & Dart Mastery (90 Hours)**
 
@@ -105,7 +105,7 @@ This repository showcases the comprehensive learning journey and project outcome
 
 Ready to discuss mobile development projects or freelancing opportunities? Let's connect!
 
-<div align="center">
+<div align="left">
   <a href="mailto:a7medhanyshokry@gmail.com" target="_blank">
     <img src="https://skillicons.dev/icons?i=gmail&theme=light" width="52" height="40" alt="gmail logo"/>
   </a>
