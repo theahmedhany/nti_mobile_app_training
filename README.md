@@ -105,30 +105,6 @@ This repository showcases the comprehensive learning journey and project outcome
 
 Ready to discuss mobile development projects or freelancing opportunities? Let's connect!
 
----
-
-<div align="center">
-
-**Proudly trained by**
-
-[![NTI](https://img.shields.io/badge/National_Telecommunication_Institute-0066CC?style=for-the-badge)](https://nti.sci.eg)
-
-**Part of**
-
-[![Digital Egypt](https://img.shields.io/badge/Digital_Egypt_Youth_Initiative-FF6B35?style=for-the-badge)](https://www.mcit.gov.eg)
-
----
-
-_Empowering Egypt's digital future, one developer at a time_ 🇪🇬
-
-</div>
-
----
-
-<h3 align="center">
-    Contact with me
-</h3>
-
 <div align="center">
   <a href="mailto:a7medhanyshokry@gmail.com" target="_blank">
     <img src="https://skillicons.dev/icons?i=gmail&theme=light" width="52" height="40" alt="gmail logo"/>
